@@ -48,3 +48,14 @@ function ageCalculator3() {
     let answer = ageCalculator2(birthYear1, currentYear1);
     document.getElementById("ageCalculator3Output").innerHTML = answer;
 }
+
+function degreesToRadians() {
+    let degrees = prompt("degrees: ");
+    let answer = degreesToRadians2(degrees);
+    document.getElementById("degreesToRadiansOutput").innerHTML = answer;
+}
+
+function degreesToRadians2(degrees) {
+    let radians = degrees * (Math.PI/180);
+    return radians;
+}
