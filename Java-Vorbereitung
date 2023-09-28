@@ -1,0 +1,191 @@
+// document.write(a, b, c)
+// function Alert_Dialog(){
+//     alert("This is a message");
+//     document.write("Dies ist eine Übung");
+// }
+// function Confirmation_Dialog(){
+//     let  frage1 = confirm("Do you want to continue?");
+//     if (frage1 ==true){
+//         document.write("User wants to continue!");
+//         return true;
+//     }
+//     else{
+//         document.write("User does not wnt to continue!");
+//         return false;
+//     }
+// }
+// function Confirmation_Dialog_Cancel(){
+//     let  frage2 = confirm("Do you want to Cancel?");
+//     if (frage2 ==true){
+//         document.write("User was Canceled!");
+//         return true;
+//     }
+//     else{
+//         document.write("User want to continue!");
+//         return false;
+//     }
+// }
+
+// function namen(){
+//  let Eingabe = prompt("Geben Sie Ihren Namen ein:");
+//  document.write("Ihr Name lautet: " + Eingabe)
+// }
+
+// function neue_function(){
+//     document.getElementById("geschriebenes").innerHTML = "etwas neues schreiben";
+// }
+// let liste = document.getElementsByTagName("Li")[0].innerHTML
+// console.log(liste);
+
+// function myFunction(){
+//     document.querySelector(".hintergrund").style.backgroundColor = "green";
+// }
+// function mysecondFunction(){
+//     document.querySelector("body").style.backgroundColor = "blue";
+// }
+// function eingabe(){
+// let dasalter = prompt("Welcher Wochentag ist heute ?:");
+// console.log(dasalter)
+// //document.write("das Alter des Autos ist " + eingabe)
+// emptyParagraph=
+// document.getElementById("message");
+// let errormessage = false;
+// try
+// {
+//     if(dasalter == "")  throw "Keine Gültige Eingabe";
+
+//     if(dasalter > 100)  throw "Ein Oldtimer";
+
+//     if(dasalter < 10)  throw "Junges Auto";
+
+// }
+
+// catch(Zusatzeingabe){
+
+//     emptyParagraph.innerHTML = "das Alter des Autos ist" + " "+ Zusatzeingabe;
+//     errormessage = true;
+// }
+// console.log(errormessage);
+// if(errormessage == false){
+//     if(dasalter<=20){
+//         emptyParagraph.innerHTML = "Der Versicherungspreis ist 50eur" + dasalter * 50 + "€";
+//     }
+
+//     else if(dasalter == 96){
+//         emptyParagraph.innerHTML = "Idealer Jahrgang"
+//     }
+// }
+// // emptyParagraph.innerHTML = "Der Versicherungspreis ist 50eur"
+
+// }
+// function eingabe(){
+//     let Wochentag = prompt("Welcher Wochentag ist heute ?:"+"Wie spät ist es ?");
+//     emptyParagraph=
+//     document.getElementById("tag");
+    
+   
+//     switch(Wochentag){
+//         case "Montag": emptyParagraph.innerHTML = "Es ist Anfang der Woche, es beginnt ein wunderschöner Tag";
+//         break;
+//         case "Dienstag": emptyParagraph.innerHTML =" Keine Sorge die Woche ist bald vorbei";
+//         break;
+//         case "Mittwoch": emptyParagraph.innerHTML = "Es ist die Mitte der Woche ";
+//         break;
+//         case "Donnerstag": emptyParagraph.innerHTML = "Bald ist Wochenende";
+//         break;
+//         case "Freitag": emptyParagraph.innerHTML = "Die Woche ist vorüber";
+//         break;
+//         case "Samstag": emptyParagraph.innerHTML = "Ja, es ist Samstag! Partyzeit!";
+//         break;
+//         case "Sonntag": emptyParagraph.innerHTML = "Jetzt wird gelernt";
+//         break;
+//     }
+
+// }
+// function uhrzeit(){
+//     let zeit_in_h = prompt("wie spät ist es ?:");
+//     emptyParagraph=
+//     document.getElementById("zeit");
+
+//     if(zeit_in_h <= 17){
+//         document.write("Es ist noch keine Zeit für ein Drink")
+//     }
+//     else if(zeit_in_h >= 17){
+//         emptyParagraph.innerHTML ="Ja es ist Partyzeit jetzt wird getrunken"
+//     }
+// }
+
+//  liste =[1, 5, 10, 20, 30, 40, 50, "alfa", "beta", "gamma", "delta", true, false, "hello"]
+
+//  for(let i = 0;  i < liste.length; i++){
+//      document.write("Die einzelnen elemente der Liste sind:"+ liste[i] + "<br>");
+    
+//  }
+//counter=0;
+
+// while (counter < 10) {
+
+//     document.write("Count: " + counter + "<br>");
+
+//     counter++;
+
+// }
+//Final Projekt:
+
+//function getOutput() {
+
+
+//  }
+//  function submitData() {
+
+//     let number_one = document.forms ["sum"]["number_one"].value;
+  
+//     let number_two = document.forms ["sum"]["number_two"].value;
+  
+   
+//     if(number_one > number_two){
+//         document.write("Player One hat mit der Zahl" + number_one + "Gewonnen")
+//     }
+//     else if(number_two > number_one){
+//         document.write("Player Two hat mit der Zahl" + number_two + "Gewonnen")
+//     }
+      
+//  }
+//  function roll(){
+//     let output1 =document.getElementById("output1")
+//     let output2 =document.getElementById("output2")
+//     let player1Score = 0
+//     let player2Score = 0
+    
+//     if(player1Score == 0){
+//         player1Score = Math.floor(Math.random()*7)
+//         output1.innerHTML = player1Score
+//     }
+//     if(player2Score == 0){
+//         player2Score = Math.floor(Math.random()*7)
+//         output2.innerHTML = player2Score
+//     }
+//  }
+let player1Score = 0;
+        let player2Score = 0;
+
+        function rollDice() {
+            const roll = Math.floor(Math.random() * 6) + 1;
+
+            if (player1Score < 50 && player2Score < 50) {
+                if (player1Score <= player2Score) {
+                    player1Score += roll;
+                } else {
+                    player2Score += roll;
+                }
+            }
+
+            document.getElementById("player1Score").value = player1Score;
+            document.getElementById("player2Score").value = player2Score;
+
+            if (player1Score >= 50) {
+                alert("Player One wins!");
+            } else if (player2Score >= 50) {
+                alert("Player Two wins!");
+            }
+        }
