@@ -59,3 +59,23 @@ function degreesToRadians2(degrees) {
     let radians = degrees * (Math.PI/180);
     return radians;
 }
+
+function areaAndVolumeOfBox() {
+    let width = prompt("width [m]: ");
+    let height = prompt("height [m]: ");
+    let depth = prompt("depth: ");
+    let answer1 = areaOfBox(width, height);
+    let answer2 = volumeOfBox(width, height, depth);
+    document.getElementById("areaOfBoxOutput").innerHTML = answer1
+    document.getElementById("volumeOfBoxOutput").innerHTML = answer2;
+}
+
+function areaOfBox(width, height,) {
+    let area = width * height;
+    return `The area of the box is: ${area}`;
+}
+
+function volumeOfBox(width, height, depth) {
+    let volume = width * height * depth;
+    return `The volume of the box is: ${volume}`;
+}
