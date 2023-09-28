@@ -1,12 +1,12 @@
 function calcTemp1() {
     let todaysTemp = randomNumber(-5,25);
+    let message = "";
     if (todaysTemp <= 10) {
-        let message = `${todaysTemp}c. The weather is cold`;
-        document.getElementById("calcTempOutput").innerHTML = message;
+        message = `${todaysTemp}c. The weather is cold`;
     } else {
-        let message = `${todaysTemp}c. The weather is moderate`;
-        document.getElementById("calcTempOutput").innerHTML = message;
+        message = `${todaysTemp}c. The weather is moderate`;
     }
+    document.getElementById("calcTempOutput").innerHTML = message;
 }
 
 function randomNumber(min, max) {
@@ -128,4 +128,28 @@ function checkValidtity(number) {
     } else {
         return false;
     }
+}
+
+function timeConvert2(minutes) {
+    let hours = Math.floor(minutes / 60);
+    let newMinutes = minutes - (hours * 60);
+    let minutesString = "minutes"
+    if (minutes == 1) {
+        minutesString = "minute"
+    }
+    let hoursString = "hours"
+    if (hours == 1) {
+        hoursString = "hour"
+    }
+    let newMinutesString = "minutes"
+    if (newMinutes == 1) {
+        newMinutesString = "minute"
+    }
+    return `${minutes} ${minutesString} = ${hours} ${hoursString} and ${newMinutes} ${newMinutesString}`;
+}
+
+function timeConvert() {
+    let userInputMinutes = Number(prompt("Please input the minutes yuo wan to convert to hours and minutes: "));
+    let answer = timeConvert2(userInputMinutes);
+    document.getElementById("timeConvertOutput").innerHTML = answer;
 }
