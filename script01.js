@@ -150,7 +150,7 @@ function timeConvert2(minutes) {
 }
 
 function timeConvert() {
-    let userInputMinutes = Number(prompt("Please input the minutes yuo wan to convert to hours and minutes: "));
+    let userInputMinutes = Number(prompt("Please input the minutes you wan to convert to hours and minutes: "));
     let answer = timeConvert2(userInputMinutes);
     document.getElementById("timeConvertOutput").innerHTML = answer;
 }
