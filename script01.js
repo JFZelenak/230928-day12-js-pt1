@@ -97,3 +97,18 @@ function capitalize() {
     document.getElementById("capitalizeOutput").innerHTML = theString2;
 }
 
+function averageGrade() {
+    let grade1 = Number (prompt("Grade for Math: "));
+    let grade2 = Number (prompt("Grade for Physics: "));
+    let grade3 = Number (prompt("Grade for English: "));
+    let answer = averageGrade2(grade1, grade2, grade3);
+    document.getElementById("averageGrade1Output").innerHTML = answer[0];
+    document.getElementById("averageGrade2Output").innerHTML = answer[1];
+}
+
+function averageGrade2(grade1, grade2, grade3) {
+    let sum = grade1 + grade2 + grade3;
+    let average = sum / 3;
+    let solution = [sum, average];
+    return solution;
+}
