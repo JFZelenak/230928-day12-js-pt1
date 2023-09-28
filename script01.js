@@ -82,6 +82,7 @@ function volumeOfBox(width, height, depth) {
 
 function capitalize() {
     let theString = prompt("Please enter a string: ");
+    theString = theString.toLowerCase();
     let theArray = theString.split("");
     console.log(theArray);
     let firstLetter = theArray[0];
