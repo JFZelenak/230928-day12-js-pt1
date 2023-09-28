@@ -1,3 +1,10 @@
+// random number generator
+function randomNumber(min, max) {
+    let randomNr = Math.floor(Math.random()*(max - min+1)+min);
+    return randomNr;
+}
+
+// ex 1 | Temperature v1.0
 document.getElementById("btn01").addEventListener("click",function() {
     let message01 = calcTemp1();
     document.getElementById("output01").innerHTML = message01;
@@ -12,9 +19,4 @@ function calcTemp1() {
         message01 = ` ${todaysTemp}c. The weather is moderate`;
     }
     return message01;
-}
-
-function randomNumber(min, max) {
-    let randomNr = Math.floor(Math.random()*(max - min+1)+min);
-    return randomNr;
 }
