@@ -19,3 +19,32 @@ function randomFood() {
     let chosenFood = favoriteFoods[randomNumber(0,3)];
     document.getElementById("randomFoodOutput").innerHTML = chosenFood;
 }
+
+function crystalGazer() {
+    let nrOfChildren = prompt("number of children: ");
+    let nameOfPartner = prompt("name of partner: ");
+    let location = prompt("location: ");
+    let jobTitle = prompt("job title: ");
+    let message = `You will be a ${jobTitle} in ${location} and married to ${nameOfPartner} with ${nrOfChildren} children.`;
+    document.getElementById("crystalGazerOutput").innerHTML = message;
+}
+
+function ageCalculator() {
+    let birthYear1 = prompt("birth year: ");
+    let currentYear1 = prompt("current year: ");
+    let answer = ageCalculator2(birthYear1, currentYear1);
+    document.getElementById("ageCalculatorOutput").innerHTML = answer;
+}
+
+function ageCalculator2(birthYear, currentYear) {
+    let age = currentYear - birthYear;
+    let message = `You are either ${age} or ` + (age-1);
+    return message;
+}
+
+function ageCalculator3() {
+    let birthYear1 = prompt("birth year: ");
+    let currentYear1 = new Date().getFullYear();
+    let answer = ageCalculator2(birthYear1, currentYear1);
+    document.getElementById("ageCalculator3Output").innerHTML = answer;
+}
