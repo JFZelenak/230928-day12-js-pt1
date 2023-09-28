@@ -79,3 +79,21 @@ function volumeOfBox(width, height, depth) {
     let volume = width * height * depth;
     return `The volume of the box is: ${volume}`;
 }
+
+function capitalize() {
+    let theString = prompt("Please enter a string: ");
+    let theArray = theString.split("");
+    console.log(theArray);
+    let firstLetter = theArray[0];
+    console.log(firstLetter);
+    let firstLetter2 = firstLetter.toUpperCase();
+    console.log(firstLetter2);
+    theArray.shift();
+    console.log(theArray);
+    theArray.unshift(firstLetter2)
+    console.log(theArray);
+    let theString2 = theArray.join("");
+    console.log(theString);
+    document.getElementById("capitalizeOutput").innerHTML = theString2;
+}
+
