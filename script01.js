@@ -21,7 +21,7 @@ function randomFood() {
 }
 
 function crystalGazer() {
-    let nrOfChildren = prompt("number of children: ");
+    let nrOfChildren = Number (prompt("number of children: "));
     let nameOfPartner = prompt("name of partner: ");
     let location = prompt("location: ");
     let jobTitle = prompt("job title: ");
@@ -30,8 +30,8 @@ function crystalGazer() {
 }
 
 function ageCalculator() {
-    let birthYear1 = prompt("birth year: ");
-    let currentYear1 = prompt("current year: ");
+    let birthYear1 = Number (prompt("birth year: "));
+    let currentYear1 = Number (prompt("current year: "));
     let answer = ageCalculator2(birthYear1, currentYear1);
     document.getElementById("ageCalculatorOutput").innerHTML = answer;
 }
@@ -43,14 +43,14 @@ function ageCalculator2(birthYear, currentYear) {
 }
 
 function ageCalculator3() {
-    let birthYear1 = prompt("birth year: ");
+    let birthYear1 = Number (prompt("birth year: "));
     let currentYear1 = new Date().getFullYear();
     let answer = ageCalculator2(birthYear1, currentYear1);
     document.getElementById("ageCalculator3Output").innerHTML = answer;
 }
 
 function degreesToRadians() {
-    let degrees = prompt("degrees: ");
+    let degrees = Number (prompt("degrees: "));
     let answer = degreesToRadians2(degrees);
     document.getElementById("degreesToRadiansOutput").innerHTML = answer;
 }
@@ -61,9 +61,9 @@ function degreesToRadians2(degrees) {
 }
 
 function areaAndVolumeOfBox() {
-    let width = prompt("width [m]: ");
-    let height = prompt("height [m]: ");
-    let depth = prompt("depth: ");
+    let width = Number (prompt("width [m]: "));
+    let height = Number (prompt("height [m]: "));
+    let depth = Number (prompt("depth [m]: "));
     let answer1 = areaOfBox(width, height);
     let answer2 = volumeOfBox(width, height, depth);
     document.getElementById("areaOfBoxOutput").innerHTML = answer1
