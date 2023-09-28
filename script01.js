@@ -98,9 +98,18 @@ function capitalize() {
 }
 
 function averageGrade() {
-    let grade1 = Number (prompt("Grade for Math: "));
-    let grade2 = Number (prompt("Grade for Physics: "));
-    let grade3 = Number (prompt("Grade for English: "));
+    let grade1 = 0;
+    while (checkValidtity(grade1) == false) {
+        grade1 = Number (prompt("Grade for Math [number from 1 to 5]: "))
+    }
+    let grade2 = 0;
+    while (checkValidtity(grade2) == false) {
+        grade2 = Number (prompt("Grade for Physics [number from 1 to 5]: "))
+    }
+    let grade3 = 0;
+    while (checkValidtity(grade3) == false) {
+        grade3 = Number (prompt("Grade for English [number from 1 to 5]: "))
+    }
     let answer = averageGrade2(grade1, grade2, grade3);
     document.getElementById("averageGrade1Output").innerHTML = answer[0];
     document.getElementById("averageGrade2Output").innerHTML = answer[1];
@@ -111,4 +120,12 @@ function averageGrade2(grade1, grade2, grade3) {
     let average = sum / 3;
     let solution = [sum, average];
     return solution;
+}
+
+function checkValidtity(number) {
+    if (number < 6 && number > 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
