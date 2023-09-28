@@ -20,3 +20,15 @@ function calcTemp1() {
     }
     return message01;
 }
+
+// ex 2 | Random Food
+document.getElementById("btn02").addEventListener("click",function() {
+    let message01 = randomFood();
+    document.getElementById("output02").innerHTML = message01;
+});
+
+function randomFood() {
+    const favoriteFoods = ["selbstgemachte Pizza mit Schinken und Käse", "Burger, Chicken Nuggets und Pommes bestellen", "selbstgemachte Köfte mit Erdäpfeln", "Nudeln mit Soße", "Wok-Huhn mit Reis und Gemüse", "selbstgemachtes Huhn mit Tzatziki und Pommes"];
+    let chosenFood = favoriteFoods[randomNumber(0,(favoriteFoods.length-1))];
+    return chosenFood;
+}
